@@ -11,28 +11,6 @@ mongoose.connect('mongodb://localhost/iCordisX')
 
 const secretKey = 'uniquepassword'
 
-const user = mongoose.model('user', {
-  username: String,
-  password: String,
-  // name: String,
-  // age: Number,
-  // gender: String,
-});
-
-const dailyReport = mongoose.model('dailyReport', {
-  chestPain: Number,
-  breathingDifficulty: Number,
-  stressLevel: Number,
-  nausea: Number,
-  tiredness: Number,
-});
-
-const ecgData = mongoose.model('ecgData', {
-  rawVoltage: [Number],
-  intervals: Number,
-  peaks: Number,
-});
-
 const app = express()
 
 app.use(bodyParser.json())
